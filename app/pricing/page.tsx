@@ -76,7 +76,7 @@ const item = {
 export default function PricingPage() {
   const { isSignedIn, user } = useUser();
   const [isLoading, setIsLoading] = useState(false);
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+  
 
   const handleSubscribe = async (priceId: string) => {
     if (!isSignedIn) {
@@ -131,22 +131,13 @@ export default function PricingPage() {
 
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
-            <span className={`text-sm ${billingPeriod === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
+            <span className={`text-sm 'text-white'}`}>
               Monthly
             </span>
-            <button
-              onClick={() => setBillingPeriod(billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
-              className="relative w-16 h-8 bg-gray-700 rounded-full p-1 transition-colors duration-200"
-            >
-              <motion.div
-                className="w-6 h-6 bg-white rounded-full"
-                animate={{ x: billingPeriod === 'monthly' ? 0 : 32 }}
-                transition={{ type: "spring", stiffness: 500, damping: 30 }}
-              />
-            </button>
-            <span className={`text-sm ${billingPeriod === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-              Yearly <span className="text-green-400">(-20%)</span>
-            </span>
+            
+              
+           
+            
           </div>
         </motion.div>
 
@@ -182,8 +173,7 @@ export default function PricingPage() {
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2">
                     <span className="text-4xl font-bold text-white">
-                      ${plan.price === "Custom" ? "Custom" : billingPeriod === 'yearly' ? 
-                        (parseInt(plan.price) * 0.8).toString() : plan.price}
+                      {plan.price}
                     </span>
                     {plan.price !== "Custom" && (
                       <span className="text-gray-400">/month</span>
