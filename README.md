@@ -28,7 +28,7 @@ npm i
 ```
 
 ### **3. Set Up Environment Variables**
-Create a `.env.local` file in the backend directory and add:
+Create a `.env.local` file in the root directory and add:
 ```env.example
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
 CLERK_SECRET_KEY=""
