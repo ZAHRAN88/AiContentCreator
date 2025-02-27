@@ -4,10 +4,9 @@ An AI-powered tool to generate engaging social media posts for various platforms
 
 ## 🌟 Features
 - AI-generated social media posts
-- Supports multiple platforms (Instagram, Facebook, Twitter, LinkedIn, etc.)
+- Supports multiple platforms (Instagram, Twitter, LinkedIn .. others coming soon)
 - Customizable post templates
 - User-friendly interface
-- Scheduled posting capabilities
 - Hashtag and keyword suggestions
 
 ---
